@@ -1,7 +1,7 @@
-from Funcoes_Produtos import *
-from Funcoes_Cliente import *
-from Funcoes_Vendedor import *
-from Menus import *
+from funcoes_produtos import *
+from funcoes_clientes import *
+from funcoes_vendedor import *
+from funcoes_menus import *
 
 cadastros_vendedor = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
 cadastros_clientes = []
