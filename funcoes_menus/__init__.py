@@ -40,3 +40,13 @@ def menuPrincipal_vendedor():
     print('5 - Atualizar Produto')
     print('0 - Deslogar')
     print(40*'=')
+    
+def menuPrincipal_cliente():
+    print(40*'=')
+    print('MENU PRINCIPAL')
+    print('1 - Atualizar Informações')
+    print('2 - Buscar Produtos')
+    print('3 - Comprar Produtos')
+    print('4 - Avaliação do Produto')
+    print('0 - Deslogar')
+    print(40*'=')    

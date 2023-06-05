@@ -8,7 +8,7 @@ def cadastrarProdutos(lista, login):
         produto['Marca'] = input('Digite a marca do produto - ')
         produto['Especificacao'] = input('Digite as especificações do produto - ')
         produto['Valor'] = float(input('Digite o valor do produto - '))
-        produto['Quantidade'] = int(input('Quantos produtos estarão a venda - '))
+        produto['Quantidade'] = int(input('Digite quantos produtos estarão a venda - '))
         produto['Vendedor'] = login
         codigoProduto = int(input('Digite o codigo do produto - '))
         colocado = True
@@ -119,7 +119,7 @@ def atualizarProdutos(lista, login):
                     print('Opção invalida')
                     
 def consultarCHATGPT(produto):
-    openai.api_key = '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'
+    openai.api_key = 'sua chave'
     
     # Set the model and prompt
     model_engine = "text-davinci-003"

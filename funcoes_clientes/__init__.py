@@ -55,6 +55,28 @@ def verificar_idade(dicionario):
             print('Ano invalido, digite os 4 numeros')
             print(40*'=')
 
+def verificar_CEP(dicionario):
+    while(True):
+        cep = int(input('Digite seu CEP (sem o -) - '))
+        if(len(str(cep)) == 8):
+            dicionario['CEP'] = cep
+            break
+        else:
+            print(40*'=')
+            print('CEP digitado é invalido')
+            print(40*'=')
+
+def verificar_celular(dicionario):
+    while(True):
+        celular = int(input('Digite o numero do seu celular parar contato (com ddd) - '))
+        if(len(str(celular)) == 11):
+            dicionario['Celular'] = celular
+            break
+        else:
+            print(40*'=')
+            print('O numero digitado é inválido')
+            print(40*'=')
+
 def cadastrarUsuario_cliente(lista):
     cadastro = {}
     verificarLogin_duplicado(lista, cadastro)
@@ -62,6 +84,29 @@ def cadastrarUsuario_cliente(lista):
     cadastro['Nome'] = input('Digite seu Nome - ')
     verificar_CPF(lista, cadastro)
     verificar_idade(cadastro)
+    verificar_CEP(cadastro)
+    cadastro['Bairro'] = input('Digite o seu bairro - ')
+    cadastro['Numero'] = int(input('Digite o numero de sua residencia - '))
+    verificar_celular(cadastro)
     lista.append(cadastro)
     print(40*'=')
     print('Usuario cadastrado com sucesso')
+    
+def buscarProdutos_cliente(lista):
+    achei = False
+    busca = input('O que está procurando - ')
+    for produto in lista:
+        if(produto['Tipo'].find(busca) >= 0 or produto['Marca'].find(busca) >= 0 or produto['Modelo'].find(busca) >= 0):
+                print(40*'=')
+                print(f'Tipo - ' + produto['Tipo'])
+                print(f'Modelo - ' + produto['Modelo'])
+                print(f'Ficha Tecnica - ' + produto['Especificacao'])
+                print(f'Quantidade - ' + str(produto['Quantidade']))
+                print(f'Valor - ' + str(produto['Valor']))
+                print(f'Codigo - ' + str(produto['Codigo']))
+                print(f'Vendedor - ' + produto['Vendedor'])
+                achei = True
+    if(achei == False):
+        print(40*'=')
+        print('Nada encontrado.')
+    return achei    

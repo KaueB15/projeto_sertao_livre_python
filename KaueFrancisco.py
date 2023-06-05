@@ -30,24 +30,24 @@ while(valor != False):
 
                     while(logado):
                         menuPrincipal_vendedor()
-                        opcaoPrincipal = int(input('Digite a opção desejada - '))
+                        opcaoPrincipal_vendedor = int(input('Digite a opção desejada - '))
 
-                        if(opcaoPrincipal == 1): 
+                        if(opcaoPrincipal_vendedor == 1): 
                             atualizarDados(cadastros_vendedor, usuarioLogado)
                             
-                        elif(opcaoPrincipal == 2):
+                        elif(opcaoPrincipal_vendedor == 2):
                             cadastrarProdutos(produtos, usuarioLogado)
                                                             
-                        elif(opcaoPrincipal == 3):
+                        elif(opcaoPrincipal_vendedor == 3):
                             buscarProdutos_vendedor(produtos, usuarioLogado)
                         
-                        elif(opcaoPrincipal == 4):
+                        elif(opcaoPrincipal_vendedor == 4):
                             removerProdutos(produtos, usuarioLogado)
 
-                        elif(opcaoPrincipal == 5): 
+                        elif(opcaoPrincipal_vendedor == 5): 
                             atualizarProdutos(produtos, usuarioLogado)
                             
-                        elif(opcaoPrincipal == 0): 
+                        elif(opcaoPrincipal_vendedor == 0): 
                             logado = False
                             
                         else:
@@ -76,8 +76,15 @@ while(valor != False):
                     usuarioLogado = login
                     logado = True
                     while(logado):
-                        'a'
-                
+                        menuPrincipal_cliente()
+                        opcaoPrincipal_cliente = int(input('Digite a opção desejada - '))
+                        
+                        if(opcaoPrincipal_cliente == 1):
+                            'a'
+                            
+                        elif(opcaoPrincipal_cliente == 2):
+                            buscarProdutos_cliente(produtos)
+                                     
             elif(opcaoCliente == 0):
                 break
                     
