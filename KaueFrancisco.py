@@ -4,8 +4,9 @@ from funcoes_vendedor import *
 from funcoes_menus import *
 
 cadastros_vendedor = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
-cadastros_clientes = []
-produtos = []
+cadastros_clientes = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
+produtos = [{'Tipo': 'Moto', 'Modelo': 'F800', 'Marca': 'BMW', 'Especificacao': 'Preta', 'Valor': 90000.0, 'Quantidade': 10, 'Vendedor': 'KaueCardz', 'Codigo': 1}]
+produtosComprados = []
 
 valor = True
 
@@ -37,6 +38,7 @@ while(valor != False):
                             
                         elif(opcaoPrincipal_vendedor == 2):
                             cadastrarProdutos(produtos, usuarioLogado)
+                            print(produtos)
                                                             
                         elif(opcaoPrincipal_vendedor == 3):
                             buscarProdutos_vendedor(produtos, usuarioLogado)
@@ -46,6 +48,9 @@ while(valor != False):
 
                         elif(opcaoPrincipal_vendedor == 5): 
                             atualizarProdutos(produtos, usuarioLogado)
+                        
+                        elif(opcaoPrincipal_vendedor == 6):
+                            gerarGrafico(produtos, usuarioLogado)
                             
                         elif(opcaoPrincipal_vendedor == 0): 
                             logado = False
@@ -84,6 +89,21 @@ while(valor != False):
                             
                         elif(opcaoPrincipal_cliente == 2):
                             buscarProdutos_cliente(produtos)
+                            
+                        elif(opcaoPrincipal_cliente == 3):
+                            comprarProdutos(produtos, usuarioLogado, produtosComprados)
+                            
+                        elif(opcaoPrincipal_cliente == 4):
+                            listarCompras(produtosComprados, usuarioLogado)
+                            
+                        elif(opcaoPrincipal_cliente == 5):
+                            produto_consulta = input('Digite o produto que quer uma opnião - ')
+                            consultarCHATGPT(produto_consulta)
+                            
+                        elif(opcaoPrincipal_cliente == 0):
+                            print(40*'=')
+                            print('Deslogado com sucesso.')
+                            break
                                      
             elif(opcaoCliente == 0):
                 break

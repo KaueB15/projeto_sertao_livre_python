@@ -1,4 +1,5 @@
 import openai
+import matplotlib.pyplot as plt
 
 def cadastrarProdutos(lista, login):
     produto = {}
@@ -123,7 +124,7 @@ def consultarCHATGPT(produto):
     
     # Set the model and prompt
     model_engine = "text-davinci-003"
-    prompt = 'Me diga resumidamente o que você acha sobre ' + produto + ' ?'
+    prompt = 'Me diga resumidamente o que você acha sobre o produto ' + produto + ' ?'
     # Set the maximum number of tokens to generate in the response
     max_tokens = 1024
 
@@ -140,3 +141,23 @@ def consultarCHATGPT(produto):
 
     # Print the response
     return completion.choices[0].text
+
+def gerarGrafico(lista, login):
+    # creating the dataset
+    for produto in lista:
+        if(produto['Vendedor'] == login):
+            modeloProduto = produto['Modelo']
+            quantidadeProduto =  produto['Quantidade'] 
+    courses = list(modeloProduto)
+    values = list(quantidadeProduto)
+
+    fig = plt.figure(figsize=(10, 5))
+
+    # creating the bar plot
+    plt.bar(courses, values, color='red',
+            width=0.4)
+
+    plt.xlabel("Produtos")
+    plt.ylabel("Quantidade")
+    plt.title("Sertao Livre")
+    plt.show()

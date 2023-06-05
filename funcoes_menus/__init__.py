@@ -38,6 +38,7 @@ def menuPrincipal_vendedor():
     print('3 - Buscar Produto')
     print('4 - Remover Produto')
     print('5 - Atualizar Produto')
+    print('6 - Gerar Grafico')
     print('0 - Deslogar')
     print(40*'=')
     
@@ -47,6 +48,7 @@ def menuPrincipal_cliente():
     print('1 - Atualizar Informações')
     print('2 - Buscar Produtos')
     print('3 - Comprar Produtos')
-    print('4 - Avaliação do Produto')
+    print('4 - Listar Compras')
+    print('5 - Avaliação do Produto')
     print('0 - Deslogar')
     print(40*'=')    

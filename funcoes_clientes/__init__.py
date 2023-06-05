@@ -110,3 +110,33 @@ def buscarProdutos_cliente(lista):
         print(40*'=')
         print('Nada encontrado.')
     return achei    
+
+def comprarProdutos(lista1, login, lista2):
+    if(buscarProdutos_cliente(lista1)):
+        print(40*'=')
+        comprados = {}
+        codigoProduto_compra = int(input('Digite o codigo do produto que deseja comprar - '))
+        quantidadeCompra = int(input('Digite quantos produtos quer comprar - '))
+        for produto in lista1:
+            if(produto['Codigo'] == codigoProduto_compra):
+                if(produto['Quantidade'] == 0):
+                    print(40*'=')
+                    print('Produto sem estoque')
+                else:
+                    novaQuantidade = produto['Quantidade'] - quantidadeCompra
+                    produto['Quantidade'] = novaQuantidade
+                    comprados['Nome_Produto'] = produto['Modelo']
+                    comprados['Quantidade_Compra'] = quantidadeCompra
+                    comprados['Valor_Unitario'] = produto['Valor']
+                    comprados['Usuario_Comprou'] = login
+                    lista2.append(comprados)
+                    print(40*'=')
+                    print('Produto comprado com sucesso')
+                    
+def listarCompras(lista, login):
+    for produto in lista:
+        if(produto['Usuario_Comprou'] == login):
+            print(40*'=')
+            print(f'Produto - ' + produto['Nome_Produto'])
+            print(f'Quantidade - ' + str(produto['Quantidade_Compra']))
+            print(f'Valor - ' + str(produto['Valor_Unitario']))
