@@ -144,12 +144,16 @@ def consultarCHATGPT(produto):
 
 def gerarGrafico(lista, login):
     # creating the dataset
+    modelos = []
+    quantidades = []
     for produto in lista:
         if(produto['Vendedor'] == login):
             modeloProduto = produto['Modelo']
-            quantidadeProduto =  produto['Quantidade'] 
-    courses = list(modeloProduto)
-    values = list(quantidadeProduto)
+            quantidadeProduto =  produto['Quantidade']
+            modelos.append(modeloProduto)
+            quantidades.append(quantidadeProduto)
+    courses = modelos
+    values = quantidades
 
     fig = plt.figure(figsize=(10, 5))
 

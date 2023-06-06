@@ -98,7 +98,8 @@ while(valor != False):
                             
                         elif(opcaoPrincipal_cliente == 5):
                             produto_consulta = input('Digite o produto que quer uma opnião - ')
-                            consultarCHATGPT(produto_consulta)
+                            resposta = consultarCHATGPT(produto_consulta)
+                            print(resposta)
                             
                         elif(opcaoPrincipal_cliente == 0):
                             print(40*'=')
