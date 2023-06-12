@@ -134,9 +134,14 @@ def comprarProdutos(lista1, login, lista2):
                     print('Produto comprado com sucesso')
                     
 def listarCompras(lista, login):
+    comprados = False
     for produto in lista:
         if(produto['Usuario_Comprou'] == login):
             print(40*'=')
             print(f'Produto - ' + produto['Nome_Produto'])
             print(f'Quantidade - ' + str(produto['Quantidade_Compra']))
             print(f'Valor - ' + str(produto['Valor_Unitario']))
+            comprados = True
+    if(comprados == False):
+        print(40*'=')
+        print('Nenhum produto comprado até o momento')

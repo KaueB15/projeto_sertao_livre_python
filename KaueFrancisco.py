@@ -2,6 +2,7 @@ from funcoes_produtos import *
 from funcoes_clientes import *
 from funcoes_vendedor import *
 from funcoes_menus import *
+from funcoes_txt import *
 
 cadastros_vendedor = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
 cadastros_clientes = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
@@ -51,6 +52,10 @@ while(valor != False):
                         
                         elif(opcaoPrincipal_vendedor == 6):
                             gerarGrafico(produtos, usuarioLogado)
+                        
+                        elif(opcaoPrincipal_vendedor == 7):
+                            salvarProdutos(produtos, usuarioLogado)
+                            lerArquivo(usuarioLogado)
                             
                         elif(opcaoPrincipal_vendedor == 0): 
                             logado = False

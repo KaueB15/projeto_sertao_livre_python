@@ -39,6 +39,7 @@ def menuPrincipal_vendedor():
     print('4 - Remover Produto')
     print('5 - Atualizar Produto')
     print('6 - Gerar Grafico')
+    print('7 - Salvar Produtos')
     print('0 - Deslogar')
     print(40*'=')
     
