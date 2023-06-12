@@ -4,9 +4,9 @@ from funcoes_vendedor import *
 from funcoes_menus import *
 from funcoes_txt import *
 
-cadastros_vendedor = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
-cadastros_clientes = [{'Login': 'KaueCardz', 'Senha': 'senha', 'Nome': 'Kaue', 'Sobrenome': 'Batista', 'CPF': '02030202133', 'Ano de Nascimento': 2003}]
-produtos = [{'Tipo': 'Moto', 'Modelo': 'F800', 'Marca': 'BMW', 'Especificacao': 'Preta', 'Valor': 90000.0, 'Quantidade': 10, 'Vendedor': 'KaueCardz', 'Codigo': 1}]
+cadastros_vendedor = []
+cadastros_clientes = []
+produtos = []
 produtosComprados = []
 
 valor = True
