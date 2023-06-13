@@ -39,7 +39,6 @@ while(valor != False):
                             
                         elif(opcaoPrincipal_vendedor == 2):
                             cadastrarProdutos(produtos, usuarioLogado)
-                            print(produtos)
                                                             
                         elif(opcaoPrincipal_vendedor == 3):
                             buscarProdutos_vendedor(produtos, usuarioLogado)
