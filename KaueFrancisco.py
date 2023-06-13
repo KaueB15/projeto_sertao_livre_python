@@ -90,7 +90,7 @@ while(valor != False):
                         opcaoPrincipal_cliente = int(input('Digite a opção desejada - '))
                         
                         if(opcaoPrincipal_cliente == 1):
-                            'a'
+                            atualizarDados(cadastros_clientes, usuarioLogado)
                             
                         elif(opcaoPrincipal_cliente == 2):
                             buscarProdutos_cliente(produtos)

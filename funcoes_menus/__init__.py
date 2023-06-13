@@ -33,7 +33,7 @@ def menuCliente():
 def menuPrincipal_vendedor():
     print(40*'=')
     print('MENU PRINCIPAL')
-    print('1 - Atualizar Informações')
+    print('1 - Atualizar Senha')
     print('2 - Cadastrar Produtos')
     print('3 - Buscar Produto')
     print('4 - Remover Produto')
@@ -46,7 +46,7 @@ def menuPrincipal_vendedor():
 def menuPrincipal_cliente():
     print(40*'=')
     print('MENU PRINCIPAL')
-    print('1 - Atualizar Informações')
+    print('1 - Atualizar Senha')
     print('2 - Buscar Produtos')
     print('3 - Comprar Produtos')
     print('4 - Listar Compras')
